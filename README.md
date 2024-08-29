@@ -29,23 +29,30 @@ where $P(d)$ is ignored, since its calculation independent of the class and $P(d
 The following experiments can be executed in the notebook [experiments.ipynb](experiments.ipynb).
 
 First of all, the following pie chart shows the distribution of classes in the dataset:
-<center><img src="imgs/classes.png" alt="drawing" width="300"/> </center>
+
+<p style="text-align: center;">
+<img src="imgs/classes.png" alt="drawing" width="400"/>
+</p>
 
 Since there are imbalanced classes, we opt for F1-score as a performance metric. Experiments were performed with the Naive Bayes classifier and its binary counting variant, which is implemented by eliminating repeated words in every instance, this option is can be used definig `binary_count=True` on the declaration of the implemented class (`NaiveBayes()`). Both classifiers were evaluated with the F1 score under the same training-test split.
 
 The F1-scores obtained are 0.6313 and 0.6062 for the naive bayes classifier and its binary-counting variant, respectively. In addition, the confusion matrices are shown below:
 
 
-<center>
+<p style="text-align: center;">
 <strong>Naive Bayes </strong>
+</p>
 
-<img src="imgs/cm1.png" alt="drawing" width="300"/>
+<p style="text-align: center;">
+<img src="imgs/cm1.png" alt="drawing" width="400"/>
+</p>
 
-
+<p style="text-align: center;">
 <strong>Binary-counting Naive Bayes </strong>
+</p>
 
-<img src="imgs/cm2.png" alt="drawing" width="300"/>
-
-</center>
+<p style="text-align: center;">
+<img src="imgs/cm2.png" alt="drawing" width="400"/>
+</p>
 
 F1-score measures reveal that the conventional Naive Bayes classifier performs better than its binary counting variant. Furthermore, confusion matrices show that the conventional approach presents fewer misclassifications in classes with fewer instances (negative and neutral), which are the most difficult classes to classify, considering the imbalance in the classes presented in the data.
