@@ -13,7 +13,7 @@ cd Sentiment-classification-with-Naive-Bayes-classifier
 ```
 
 ## Method description
-The Naive Bayes classifier is implemented in the [NB.py](NB.py) code, where its conventional definition is considered. The basic idea of ​​this classifier is, for each class, to calculate the conditional probability $P(c|d)$, that is, the probability that an instance $d$ belongs to class $c$, given the characteristics of $d$, class d is chosen as the one that maximizes this probability. Considering the Baye's rule, the predicted class $\hat{c}$ is calculated as follows:
+The Naive Bayes classifier is implemented in the [NB.py](NB.py) code, where its conventional definition is considered. The basic idea of ​​this classifier is, for each class, to calculate the conditional probability $P(c|d)$, that is, the probability that an instance $d$ belongs to class $c$, given the characteristics of $d$, class d is chosen as the one that maximizes this probability. Considering the Bayes' rule, the predicted class $\hat{c}$ is calculated as follows:
 $$\hat{c} = \begin{matrix}
 argmax\\
 c\in C
@@ -23,20 +23,20 @@ c\in C
 \end{matrix}\,\,\frac{P(d|c)P(c)}{P(d)}$$
 
 
-where $P(d)$ is ignored, since its calculation independent of the class and $P(d|c)$ and $P(c)$ are calculated based on the word ocurrences in the training data.
+where $P(d)$ is ignored, since its calculation independent of the class and $P(d|c)$ and $P(c)$ are calculated based on the word occurrences in the training data.
 
 ## Experiments
 The following experiments can be executed in the notebook [experiments.ipynb](experiments.ipynb).
 
-First of all, the following pie chart shows the distribution of classes in the dataset:
+First, the following pie chart shows the distribution of classes in the dataset:
 
 <p style="text-align: center;">
 <img src="imgs/classes.png" alt="drawing" width="400"/>
 </p>
 
-Since there are imbalanced classes, we opt for F1-score as a performance metric. Experiments were performed with the Naive Bayes classifier and its binary counting variant, which is implemented by eliminating repeated words in every instance, this option is can be used definig `binary_count=True` on the declaration of the implemented class (`NaiveBayes()`). Both classifiers were evaluated with the F1 score under the same training-test split.
+Since there are imbalanced classes, we opt for F1-score as a performance metric. Experiments were performed with the Naive Bayes classifier and its binary counting variant, which is implemented by eliminating repeated words in every instance, this option is can be used defining `binary_count=True` on the declaration of the implemented class (`NaiveBayes()`). Both classifiers were evaluated with the F1 score under the same training-test split.
 
-The F1-scores obtained are 0.6313 and 0.6062 for the naive bayes classifier and its binary-counting variant, respectively. In addition, the confusion matrices are shown below:
+The F1-scores obtained are 0.6313 and 0.6062 for the Naive Bayes classifier and its binary-counting variant, respectively. In addition, the confusion matrices are shown below:
 
 
 <p style="text-align: center;">
